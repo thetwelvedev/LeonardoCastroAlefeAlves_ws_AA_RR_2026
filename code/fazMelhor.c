@@ -79,7 +79,7 @@ int main(){
         return 1;
     }
 
-    saida = fopen("resultadosMelhor.txt","w");
+    saida = fopen("resultadosM.txt","w");
 
     if(saida==NULL){
         printf("Erro ao criar resultados.txt\n");

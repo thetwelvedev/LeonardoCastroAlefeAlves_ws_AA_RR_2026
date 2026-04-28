@@ -12,15 +12,21 @@ Além disso, será proposta uma versão mais eficiente do algoritmo, comparando 
 
 ---
 
-## 📑 Índice
+## Índice
 
-* [Objetivos](#objetivos)
-* [Algoritmo Analisado](#algoritmo-analisado)
-* [Análise de Complexidade](#análise-de-complexidade)
-* [Experimentação](#experimentação)
-* [Resultados](#resultados)
-* [Conclusão](#conclusão)
-* [Referências](#referências)
+- [FazAlgo](#fazalgo)
+  - [Seminário de Análise de Algoritmos](#seminário-de-análise-de-algoritmos)
+  - [Índice](#índice)
+  - [Objetivos](#objetivos)
+  - [Algoritmo Analisado](#algoritmo-analisado)
+  - [Função de Custo e Complexidade](#função-de-custo-e-complexidade)
+    - [FazAlgo](#fazalgo-1)
+    - [FazMelhor](#fazmelhor)
+  - [Experimentação e Resultados](#experimentação-e-resultados)
+    - [FazAlgo](#fazalgo-2)
+    - [FazMelhor](#fazmelhor-1)
+    - [Comparativo FazAlgo x FazMelhor](#comparativo-fazalgo-x-fazmelhor)
+  - [Referências](#referências)
 
 ---
 
@@ -38,12 +44,17 @@ Além disso, será proposta uma versão mais eficiente do algoritmo, comparando 
 ## Algoritmo Analisado
 
 ```c
-void FazAlgo (int n) {
-    int i, j, k;
-    for (i = 1; i < n - 1; i++) {
-        for (j = 2; j <= n; j++) {
-            for (k = 1; k <= j; k++) {
-                // Algum comando de custo O(1)
+void FazAlgo(int n){
+
+    volatile long soma = 0;
+
+    int i,j,k;
+
+    for(i=1;i<n-1;i++){
+        for(j=i+1;j<=n;j++){
+            for(k=1;k<=j;k++){
+
+                soma +=1;
             }
         }
     }
@@ -52,37 +63,28 @@ void FazAlgo (int n) {
 
 ---
 
-## Análise de Complexidade
+## Função de Custo e Complexidade
 
-A análise será baseada na contagem de operações fundamentais dentro dos laços aninhados, levando à determinação da função de custo e sua notação assintótica.
+### FazAlgo
+![Imagem-1](img/FazAlgo.png)
 
----
-
-## Experimentação
-
-Serão realizados testes variando o valor de `n`, registrando o tempo de execução para cada entrada.
-
-Ferramentas sugeridas:
-
-* Linguagem C
-* Função `clock()` ou `gettimeofday`
-* Exportação de dados para CSV
+### FazMelhor
+![Imagem-2](img/FazMelhor.png)
 
 ---
 
-## Resultados
+## Experimentação e Resultados
 
-Os resultados serão apresentados em forma de gráfico (tempo × entrada), permitindo observar o crescimento da função e validar a complexidade teórica.
+- Gráfico de linha relacionando entrada × tempo de execução
 
----
+### FazAlgo
+![Imagem-3](code/gráfico-faz-algo.png)
 
-## Conclusão
+### FazMelhor
+![Imagem-4](code/gráfico-faz-melhor.png)
 
-Discussão sobre:
-
-* Complexidade encontrada
-* Diferença entre teoria e prática
-* Comparação com algoritmo otimizado
+### Comparativo FazAlgo x FazMelhor
+![Imagem-5](img/comparativo-dos-algoritmos.png)
 
 ---
 

@@ -26,6 +26,9 @@ Além disso, será proposta uma versão mais eficiente do algoritmo, comparando 
     - [FazAlgo](#fazalgo-2)
     - [FazMelhor](#fazmelhor-1)
     - [Comparativo FazAlgo x FazMelhor](#comparativo-fazalgo-x-fazmelhor)
+  - [Análise Assintótica](#análise-assintótica)
+    - [FazAlgo](#fazalgo-3)
+    - [FazMelhor](#fazmelhor-2)
   - [Referências](#referências)
 
 ---
@@ -85,6 +88,16 @@ void FazAlgo(int n){
 
 ### Comparativo FazAlgo x FazMelhor
 ![Imagem-5](img/comparativo-dos-algoritmos.png)
+
+---
+
+## Análise Assintótica
+
+### FazAlgo
+![Imagem-6](img/FazAlgoCalComplex.png)
+
+### FazMelhor
+![Imagem-7](img/FazMelhorCalComplx.png)
 
 ---
 
